@@ -1,4 +1,4 @@
 [package]
-name = "tic-tac-toe"
+name = "tictactoe"
 version = "0.1.0"
 edition = "2021"

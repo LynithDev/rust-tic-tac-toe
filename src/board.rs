@@ -28,7 +28,7 @@ impl Board {
         println!("Player {} has won the game!", self.current_player.to_string());
     }
 
-    fn game_over(&mut self, player: Player) {
+    fn game_over(&mut self) {
         self.game_over = true;
     }
 
@@ -68,8 +68,8 @@ impl Board {
                 continue;
             };
 
-            if let Some(player) = self.check_condition(a, b) {
-                self.game_over(player);
+            if self.check_condition(a, b).is_some() {
+                self.game_over();
                 break;
             };
             self.next_player();
